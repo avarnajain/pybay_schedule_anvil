@@ -6,7 +6,23 @@ import pprint
 from requests import ConnectionError
 
 def get_article_body(url):
-    """Call all functions needed to extract p tag text from article urls"""
+    """Call all functions needed to extract p tag text from article urls
+    returns a dictionary with the following format:
+    {
+        date: {
+            timeslot: [
+                {
+                    "title": title,
+                    "speaker": speaker,
+                    "room": room,
+                    "duration": duration,
+                    "description": description            
+                }
+            ]
+        }
+    }
+    
+    """
     bs = fetch_article(url)
     if (bs):
         full_html_str = find_events(bs)
