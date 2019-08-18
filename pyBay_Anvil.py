@@ -50,17 +50,18 @@ def find_events(soup):
                                         'description': description
                                         })
                
-    for key in event_dict.keys():
-        for k in event_dict[key].keys():
-            for item in event_dict[key][k]:
-                print(key)
-                print(k)
-                print(item['title'])
-                print(item['speaker'])
-                print(item['room'])
-                print(item['duration'])
-                print(item['description'])
-                print('_______')
+    # for key in event_dict.keys():
+    #     for k in event_dict[key].keys():
+    #         for item in event_dict[key][k]:
+    #             print(key)
+    #             print(k)
+    #             print(item['title'])
+    #             print(item['speaker'])
+    #             print(item['room'])
+    #             print(item['duration'])
+    #             print(item['description'])
+    #             print('_______')
+    return event_dict
 
 
 def format_tag(html_string):
